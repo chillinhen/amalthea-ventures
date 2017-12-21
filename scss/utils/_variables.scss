@@ -1,0 +1,49 @@
+/* =============================================================================
+   Colors
+   ========================================================================== */
+$foo:red;
+$brand-primary:#404041;
+$brand-secondary: #39b470;
+
+$brand-success:#21A356;
+$brand-info:#7EA0C5;
+$brand-warning:#fcf8e3;
+$brand-danger:#DB221C;
+$body-bg:#FAFAFA;
+$text-color:#333;
+$light-text-color:#999;
+$light-gray:#ccc;
+$dark-gray:darken($light-gray,50%);
+$link-color:$brand-primary;
+$border-color:$light-gray;
+
+$white: #fff;
+$bg-inverse: #000;
+
+
+
+/* =============================================================================
+   Height & Widths
+   ========================================================================== */
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+$base-font-size:            100% !default;
+$base-line-height:          150% !default;
+$rem-base:                  14px !default;
+
+$paragraph-margin:          1rem;
+
+$headings-font-family:    'objektiv-mk3', Arial,Helvetica, sans-serif !important;
+$body-font-family:        'objektiv-mk3', Arial,Helvetica, sans-serif; 
+
+$heading-text-color:        $brand-primary;
+$body-text-color:           $text-color;
+$text-muted-color:          lighten($text-color,25%);
+
+/* Margins & Paddings */
+$outer-grid:2 * $rem-base;
+$vertical-spacing:2*$rem-base;

@@ -1,0 +1,98 @@
+.page-template-template-maintenance, .error404, .archive{
+    background: -webkit-linear-gradient(180deg, rgb(203, 205, 208), rgb(255, 255, 255)) !important;
+    background: linear-gradient(180deg, rgb(203, 205, 208), rgb(255, 255, 255))!important;
+    background-attachment: fixed;
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    min-height:100vH;
+    font-size:$rem-base;
+    @media screen and (max-width:$screen-iPhone5){
+        background:#fff !important;
+        border:1px solid $brand-secondary;
+    }
+    .wrapper-maintenance{
+        @media screen and (min-width:$screen-xs){
+            @include outer-container(1200px);
+            margin-top:2em;
+            padding:0 $outer-grid/2;
+            > div{
+                margin:$vertical-spacing 0;   
+            }
+        }
+        @media screen and (max-width:$screen-xs) and (orientation:portrait){
+            padding:0 $outer-grid/2;
+        }
+
+        > main{
+            background:#fff;
+            @media screen and (orientation:landscape){
+                min-width:452px; /*$screen-xs -$outer-grid*/
+            }
+
+            @media screen and (min-width:$screen-iPhone5 + 1){
+                @include box-shadow-green;
+                min-width: 480px;
+            }
+
+            .logo { 
+                margin: 0 auto;
+                width:75%; 
+            }
+            article{
+                padding:0 $outer-grid;
+                @media screen and (min-width:$screen-iPhone5){
+                    padding:2.25*$outer-grid 1.75*$outer-grid 2*$outer-grid 1.75*$outer-grid;
+                }
+                @include display(flex);
+                @include flex-direction(column);
+                @include justify-content(space-around);
+            }
+
+        }
+    }
+    h2{
+        font-weight:700;
+        text-transform:uppercase;
+        letter-spacing:.1em;
+        font-size: 1.05em;
+        text-align:center;
+        @media screen  and (max-width:$screen-sm - 1){
+            margin: 3vH 0;
+        }
+        @media screen  and (min-width:$screen-sm){
+            margin: 3vH 0 1vH;
+        }
+
+        em{
+            font-weight:normal;
+            font-size:smaller;
+            text-transform:lowercase;
+            letter-spacing:0;
+        }
+        &:after{
+            display:none;
+        }
+    }
+    address{
+        font-weight:400;
+        text-align:left;
+        > div {
+            @include display(flex);
+            @include justify-content(space-between);
+            @media screen and (max-width:$screen-sm - 1) and (orientation:portrait){
+                @include flex-direction(column);
+                &:first-child{
+                    margin-bottom:1em;
+                }
+                a {
+                    padding:.5em 0;
+                }
+                @media screen  and (max-width:$screen-sm - 1) and (orientation:landscape){
+                    @include flex-direction(row);
+                }
+            }
+
+        }
+    }
+}

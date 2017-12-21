@@ -1,0 +1,44 @@
+article{
+    display: block;
+    background: lighten($body-bg,50%);
+    border: 1px solid $border-color;
+    position: relative;
+    max-width: 95%;
+    margin:0 auto $vertical-spacing;
+    padding:$outer-grid;
+    .page-template-template-maintenance &, .error404 &, .archive &{border:0;}
+    .home, .archive, .author{
+        &.has-post-thumbnail{
+            float: left;
+            margin-right: $vertical-spacing/2; 
+        }
+    }
+
+    .post-details{
+        @include clearfix;
+        font-size:1.2rem;
+        color:$text-color;
+        &.top{
+            border-bottom:1px solid $border-color;
+            padding-bottom:.5*$vertical-spacing;
+            margin-bottom:$vertical-spacing;
+        }
+        &.bottom{
+            border-top:1px solid $border-color;
+            padding-top:.5*$vertical-spacing;
+            margin-top:$vertical-spacing;
+        }
+        .comments{float:right;}
+
+    }
+    .post-edit-link{
+        color:$text-color;
+        display:block;
+        text-align:right;
+    }
+    #comments{
+        margin-top:2*$vertical-spacing;
+        padding-top:2*$vertical-spacing;
+        border-top:1px solid $border-color;
+    }
+}

@@ -1,0 +1,170 @@
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+img {
+    max-width: 100%;
+    height:auto;
+    .logo & {
+        max-width:none;
+        width: 100%;
+        height:auto;
+    }
+
+    &[class*="wp-image"].alignleft,
+    a &[class*="wp-image"].alignleft{
+        display: inline;
+        float: left;
+        margin-right: $vertical-spacing/2;
+       
+    }
+    &[class*="wp-image"].alignright,
+    a &[class*="wp-image"].alignright{
+        display: inline;
+        float: right;
+        margin-left: $vertical-spacing/2;
+    }
+    &[class*="wp-image"].aligncenter,
+    a &[class*="wp-image"].aligncenter{
+        clear: both;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:$vertical-spacing/2;
+    }
+    &[class*="wp-image"].alignnone,
+    a &[class*="wp-image"].alignnone{
+        display: block;
+        margin-bottom:$vertical-spacing/2;
+    }
+}
+
+div.aligncenter {
+	clear: both;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:$vertical-spacing/2;
+}
+
+.wp-caption {
+	background:$body-bg;
+	border:1px solid $border-color;
+	max-width:96%;
+	padding:.5rem .3rem 1rem;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:.5rem 2rem 2rem;
+}
+.wp-caption.alignleft {
+        margin:.5rem 2rem 2rem 0;
+}
+.wp-caption.alignright {
+        margin:.5rem 0 2rem 2rem;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:1.1rem;
+	line-height:1.7rem;
+	margin:0;
+	padding:0 .4rem .5rem;
+}
+/*------------------------------------------------
+Nivo Lightbox
+--------------------------------------------------*/
+.nivo-lightbox-overlay{
+    &.nivo-lightbox-open{
+        @include alpha-background-color(rgba(black, 0.75), white);
+    }
+}
+a[class*="nivo-lightbox"]{color:white;}
+.nivo-lightbox-nav, .nivo-lightbox-close{
+    display:block;
+    @extend %text-indent;
+    background: transparent url(../img/nivo-icons.png) no-repeat 0% 0%;
+    width:26px;
+    height:26px;
+}
+.nivo-lightbox-close{
+    top:10%;
+    right:10%;
+}
+.nivo-lightbox-nav{
+    &.nivo-lightbox-prev{
+        left:10%;
+        background-position: 0% 100%;
+    }
+    &.nivo-lightbox-next{
+        right:10%;
+        background-position: 0% 50%;
+    }
+}
+/*------------------------------------------------
+gallery
+--------------------------------------------------*/
+[class*='gallery-columns']{
+    @include display(flex);
+/*    @include justify-content(space-between);*/
+    @include flex-wrap(wrap);
+    @include flex-grow(1);
+    margin: -1em;
+}
+.gallery-item{
+    margin:1em;
+
+    a {
+        display:block;
+        width:inherit;
+        img {
+            @include shadow;
+            width:100%;
+            height:auto;
+        }
+    }
+
+    .gallery-columns-1 &{
+        @include flex-basis(calc(100%/1 - 2em));
+        -ms-flex-preferred-size:calc(100%/1 - 2.5em);
+    }
+    .gallery-columns-2 &{
+        @include flex-basis(calc(100%/2 - 2em));
+        -ms-flex-preferred-size:calc(100%/2 - 2.5em);
+    }
+    .gallery-columns-3 &{
+        @include flex-basis(calc(100%/3 - 2em));
+        -ms-flex-preferred-size:calc(100%/3 - 2.5em);
+    }
+    .gallery-columns-4 &{
+        @include flex-basis(calc(100%/4 - 2em));
+        -ms-flex-preferred-size:calc(100%/4 - 2.5em);
+    }
+    .gallery-columns-5 &{
+        @include flex-basis(calc(100%/5 - 2em));
+        -ms-flex-preferred-size:calc(100%/5 - 2.5em);
+    }
+    .gallery-columns-6 &{
+        @include flex-basis(calc(100%/6 - 2em));
+        -ms-flex-preferred-size:calc(100%/6 - 2.5em);
+    }
+    .gallery-columns-7 &{
+        @include flex-basis(calc(100%/7 - 2em));
+        -ms-flex-preferred-size:calc(100%/7 - 2.5em);
+    }
+    .gallery-columns-8 &{
+        @include flex-basis(calc(100%/8 - 2em));
+        -ms-flex-preferred-size:calc(100%/8 - 2.5em);
+    }
+    .gallery-columns-9 &{
+        @include flex-basis(calc(100%/9 - 2em));
+        -ms-flex-preferred-size:calc(100%/9 - 2.5em);
+    }
+
+}

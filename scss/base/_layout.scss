@@ -1,0 +1,33 @@
+body:not(.page-template-template-maintenance),
+body:not(.error404){
+    background:$body-bg;
+}
+.wrapper{
+    > div {
+        background:$body-bg;
+    }
+    @media screen and (min-width:$screen-xs){
+        @include outer-container(1200px);
+        padding:$outer-grid;
+    }
+}
+.header {
+        .logo {
+            margin:$vertical-spacing 0;
+            img {
+                height:120px;
+            }
+            span{
+                @include tag-line;
+                display:block;
+                margin-top:$vertical-spacing;
+            }
+        }
+    } 
+.header-image{
+    min-height: 25vH;
+     max-height: 50vH;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.footer{text-align: center;}

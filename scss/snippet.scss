@@ -1,0 +1,50 @@
+
+.page-template-template-maintenance{
+    .wrapper{
+        main{
+            
+
+            @media screen and (max-width:$screen-xs){
+                .logo{width:75%;}
+            }
+            @media screen and (min-width:$screen-xs + 1) and (max-width:$screen-sm) and (orientation:landscape){
+                width:70vW;
+                height:90vH;
+                margin-top:5vH;
+                .logo{
+                    width:60%;
+                }
+                article{
+                    margin:0 4em;
+                }
+                address{
+                    margin:2em 0 4em 0;
+                }
+            }
+            @media screen and (max-width:$screen-sm) and (orientation:portrait){
+                width:calc(100vW - 4em);
+                article{
+                    width:75%;
+                    margin:0 auto;
+                }
+                address{
+                    margin:2em 0;
+                    > div:first-child{margin-bottom:1em;}
+                }
+            }
+        }
+
+
+    }
+
+    
+
+    h3{
+
+        @media screen and (max-width:$screen-sm) and (orientation:portrait){
+            font-size: 1.2em;
+            line-height: 1.25;
+        }
+        
+    }
+}

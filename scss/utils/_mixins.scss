@@ -1,0 +1,51 @@
+.foo{
+    border:1px solid $foo;
+}
+@mixin clearfix{
+    &:before,
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+/** Buttons **/
+@mixin button-style ($r, $pd, $font) {
+    -webkit-border-radius: $r;
+    border-radius: $r;
+    border-width: 0;
+    box-shadow: none;
+    padding: $pd;
+    font-size: $font;
+    line-height: 1;
+}
+@mixin tag-line{
+            font-weight:700;
+        text-transform:uppercase;
+        letter-spacing:.1em;
+        font-size: 1.05em;
+        text-align:center;
+        color:#000;
+}
+@mixin header-subline{
+    &:after {
+        content:'';
+        display:block;
+        height:3px;
+        width:12%;
+        background:$brand-secondary;
+        margin-top: .5em;
+    }
+}
+@mixin box-shadow-green{
+    -webkit-box-shadow: 5px 5px 0 0 rgba(57,180,112,.75);
+box-shadow: 5px 5px 0 0 rgba(57,180,112,.75);
+}
+@mixin wrapper{
+    max-width: 90%;
+    margin: 0 auto;
+    z-index: 2;
+     @media screen and (min-width:$screen-lg){
+        width: 1140px;
+    }
+}
