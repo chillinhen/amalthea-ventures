@@ -6,6 +6,7 @@
                                 <?php endif;?>
 			</footer>
 			<!-- /footer -->
+                        <div id="offCanvas"><?php html5blank_nav(); ?></div>
 
 			
 		<?php wp_footer(); ?>

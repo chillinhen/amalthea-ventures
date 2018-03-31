@@ -55,6 +55,7 @@
                             <span><?php bloginfo('description'); ?></span>
                         </a>
                     </h1>
+                    <span class="button toggle"> </span>
 
                     <!-- /logo --> 
                 </div>
@@ -65,7 +66,7 @@
 
 
             <!-- nav -->
-            <nav class="nav" role="navigation">
+            <nav class="nav" role="navigation" id="main-nav">
     <?php html5blank_nav(); ?>
             </nav>
             <!-- /nav -->
