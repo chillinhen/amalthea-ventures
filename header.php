@@ -41,22 +41,29 @@
                 <div class="wrapper">
                     <!-- logo -->
                     <h1 class="logo">
+                        <?php if (has_custom_logo()) : ?>
+                        <?php the_custom_logo(); ?>
+                        <span><?php bloginfo('description'); ?></span>
+                        <?php else : ?>
                         <a href="<?php echo home_url(); ?>">
-                            <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-                            <?php if (has_custom_logo()) : ?>
-
-                                <?php the_custom_logo(); ?>
-
-                            <?php else : ?>
-
-                                <?php bloginfo('name'); ?>
-                                <!-- code for site title and description when there's no image -->
-                            <?php endif; ?>
+                            <?php bloginfo('name'); ?>
                             <span><?php bloginfo('description'); ?></span>
                         </a>
+                        <?php endif;?>
                     </h1>
-                    <span class="button toggle"> </span>
+                    <label class="navbar-toggle">
+                            <input type="checkbox">
+                            <!-- nav -->
+                            <nav class="nav" role="navigation" id="main-nav">
+                                <?php html5blank_nav(); ?>
+                            </nav>
+                            <!-- /nav -->
 
+                            <span class="button"></span>
+                        </label>
+
+
+                    
                     <!-- /logo --> 
                 </div>
             </header>
@@ -65,11 +72,7 @@
             <!-- header -->
 
 
-            <!-- nav -->
-            <nav class="nav" role="navigation" id="main-nav">
-    <?php html5blank_nav(); ?>
-            </nav>
-            <!-- /nav -->
+            
              <?php
             if (is_singular() && has_post_thumbnail()) :
                 $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-image-cover');

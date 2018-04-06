@@ -3,34 +3,38 @@ body:not(.error404){
     background:$body-bg;
 }
 .wrapper{
-    @include display(flex);
     @media screen and (max-width:$screen-xs){
         padding:$outer-grid/2;
     }
     @media screen and (max-width: $screen-sm){
-        padding:$outer-grid;
-        body > .header > &{
-            @include flex-direction(row);
-        }
-        body > main > &{
-            @include flex-direction(column);
-            .sidebar{
-                display:none;
-            }
-        }
-    }
-    @media screen and (min-width: $screen-sm + 1){
-        @include flex-direction(row);
-        .content{
-            width:75%;
-        }
-        .sidebar{
-            width:25%;
-        }
+        padding:$outer-grid; 
     }
     @media screen and (min-width:$screen-xs){
         @include outer-container(1200px);
 
+    }
+    > .row{
+        @include display(flex);  
+        @media screen and (max-width: $screen-sm){
+            body > .header > .wrapper > &{
+                @include flex-direction(row);
+            }
+            body > main > .wrapper > &{
+                @include flex-direction(column);
+                .sidebar{
+                    display:none;
+                }
+            }
+        }
+        @media screen and (max-width: $screen-sm){
+            @include flex-direction(row);
+            .content{
+                width:75%;
+            }
+            .sidebar{
+                width:25%;
+            }
+        }
     }
 }
 
@@ -52,6 +56,10 @@ body:not(.error404){
             margin-top:$vertical-spacing;
         }
     }
+    &.sticky .logo{
+        
+    }
+    
 } 
 .header-image{
     min-height: 25vH;

@@ -1,22 +1,29 @@
 (function ($, root, undefined) {
 
     $(function () {
-        var stickyNavTop = $('#main-nav').offset().top;
+        var stickyNavTop = $('.navbar-toggle').offset().top;
 
         var stickyNav = function () {
             var scrollTop = $(window).scrollTop();
 
             if (scrollTop > stickyNavTop) {
-                $('#main-nav').addClass('sticky');
+                $('.navbar-toggle').addClass('sticky');
+                $('h1.logo').addClass('sticky-logo');
             } else {
-                $('#main-nav').removeClass('sticky');
+                $('.navbar-toggle').removeClass('sticky');
+                $('h1.logo').removeClass('sticky-logo');
             }
         };
 
         stickyNav();
         $(window).scroll(stickyNav);
+        
+        //stickybits('.fixedsticky', {useStickyClasses: true});
 
     });
+    
 
 })(jQuery, this);
+
+
 

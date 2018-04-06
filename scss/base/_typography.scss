@@ -36,10 +36,12 @@
     margin-top:0;
     text-transform: none;
 }
-@mixin main-menu($weight){
+@mixin main-menu($weight, $col){
     font-family:$headings-font-family;
     text-transform: uppercase;
     font-weight:$weight;
+    color:$col;
+    > a {color:inherit}
 }
 /* =============================================================================
    Basics
@@ -166,8 +168,10 @@ p {
 }
 
 a{
-
-    color:$brand-primary;
+    .content{
+        color:$brand-primary;
+    }
+    
     &.post-edit-link{
         .page-template-template-maintenance &{
             margin-top:10vH;

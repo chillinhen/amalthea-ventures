@@ -1,103 +1,126 @@
-.button.toggle{
-    display:block;
-    position: relative;
-    &:after{
-        @include icon-style ("\f0c9", 0, 1, 0, 3em);
+#main-nav{
+    @media screen and (max-width:$screen-pad-landscape){
+    height:0;
+    overflow:hidden;
     }
 }
-nav{
-    body > & > ul{
-        @media screen and (min-width:$screen-md){
+.navbar-toggle{
+    position: relative;
+    input{
+        @media screen and (min-width:$screen-pad-landscape){
+        display:none;
+        }
+        @media screen and (max-width:$screen-pad-landscape){
+        &:checked + #main-nav {
+            height:auto;       
+            @include transition (all, .2s, ease-out);
+        }
+        }
+    }
+    .button{
+        @media screen and (max-width:$screen-pad-landscape){
+        position:absolute;
+        top:0;
+        right:0;
+        &:after{
+            @include icon-style ("\f0c9", 0, 1, 0, 3em);
+        }
+        }
+    }
+}
+.sticky{
+    &.navbar-toggle{@include sticky-menu;} 
+    #main-nav{
+        ul{
+            padding:0;
+            @include display(flex);
+            @include justify-content(space-between);
+            @include align-items(center);
+        }
+        @include transition (all, 200ms, ease-out);
+        margin:0 auto;  
+
+        li[class*="item"]{
+            &.home {
+                a{
+                    @include text-indent(-9999px);
+                    background:transparent url('../img/logo-av-small.svg') no-repeat left center ;
+                    height: 2em;
+                    width: 4em;
+                }
+                &:after{display:none;}
+            }
+        }
+    }
+}
+nav#main-nav{
+    @media screen and (min-width:$screen-pad-landscape){
             @include wrapper;
             @include display(flex);
             @include justify-content(center);
             margin:$vertical-spacing auto;
         }
-    }
-    &.sticky{
-        position:fixed;
-        top:0;
-        left:0;
-        right:0;
-        background:#fff;
-        @include shadow;
-        @include transition (background, 2s, ease-out);
-        z-index:9999;
-    }
 }
 .menu-item{
     list-style: none;
-    @include main-menu(400);
-    #main-nav &{
-        position:relative;
-        display:inline-block; 
-        .sub-menu & {
-            border-bottom:1px solid $brand-secondary;
-            padding:1.5rem 0;
-            line-height:1.2;
-            text-transform:none;
-            white-space:nowrap;
-            &:after{
-                display:none;
-            }
-            &:last-child{border:0;}
-            > a {color:lighten($text-color,90%);}
-        }
-        &:after {
-            content: "/";
-            font-weight:bold;
-            color:$brand-secondary;
-            padding:0 .5em;
-        }
-        &:hover{
-            > .sub-menu {
-                /*             display:block;*/
-                opacity:1;
-                top:1.5*$vertical-spacing;
-            }
-
-        }
-        > .sub-menu {
-            /*       display:none;*/
-            @media screen and (min-width:$screen-md){
-                opacity:0;
-                min-width:10vW;
-                position:absolute;
-                top:2.5*$vertical-spacing;
-                background:rgba(0,0,0,.75);
-                z-index:10;
-                @include box-shadow-green;
-                padding:0 2rem;
-                @include transition(all 0.2s ease-in-out);
-                .sub-menu {
-                    left:$outer-grid;
-                }
-            }
-
-        }
-    }
-    #offCanvas &{
-        padding:$vertical-spacing/2 0;
-    }
-
-
-
-
+    @include main-menu(400,$brand-primary);
     &.menu-item-has-children > a:after{
         @include icon-style ("\f0d7", 0, 1, .5em, 1em);
         color:$brand-secondary;
     }
+    @media screen and (max-width:$screen-xs){
+        display:block;
+    }
+    @media screen and (min-width:$screen-xs + 1){
+        position:relative;
+        #main-nav > ul > &{
+            display:inline-block;
+            &:after {
+                content: "/";
+                font-weight:bold;
+                color:$brand-secondary;
+                padding:0 .5em;
+            }
+
+        }
+    }
+    &:hover{
+        > .sub-menu {
+            opacity:1;
+            top:.75*$vertical-spacing;
+        }
+
+    }
+    .sub-menu &{
+        border-bottom:1px solid $brand-secondary;
+        padding:1.5rem 0;
+        line-height:1.2;
+        text-transform:none;
+        white-space:nowrap;
+        &:last-of-type{border:0;}
+
+    }
+
 }
-#main-nav{
-    @media screen and (max-width:$screen-sm){
-        display:none;
+.sub-menu{
+    @media screen and (min-width:$screen-xs){
+        background:rgba(0,0,0,.75);
+        @include box-shadow-green;
+        padding:0 2rem;
+        position:absolute;
+        top:2.5*$vertical-spacing;
+        z-index:10;
+        min-width:10vW;
+        opacity:0;
+        @include transition(all 0.2s ease-in-out);
+        a {color:lighten($text-color,90%) !important;}
+        .sub-menu {
+            left:100%;
+        }
+
     }
 }
-#offCanvas{
-    @media screen and (min-width:$screen-sm){
-        display:none;
-    }
-}
+
 .pagination{
     @include display(flex);
     @include justify-content(center);

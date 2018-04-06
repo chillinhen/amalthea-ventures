@@ -1,27 +1,24 @@
 @charset "UTF-8";
-/* line 4, C:/MAMP/htdocs/toolbox/bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-/* line 9, C:/MAMP/htdocs/toolbox/bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
 *, *::after, *::before {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 /*** BSP: @extend %reset;***/
-/* line 20, C:/MAMP/htdocs/toolbox/sass/myMixins/extends.scss */
 .nivo-lightbox-nav, .nivo-lightbox-close {
   text-indent: -9999px;
   display: block;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 /*** Mixins & Placeholders ***/
 /**** caret ****/
+/*@include icon-style ("\f075", 0, 1, 0, 2em);*/
 /* Bsp. @include alpha-background-color(rgba(black, 0.35), white); */
 /******* SVG *********/
 /*** WP Specials ***/
+/**** Filter ****/
+/*** typography***/
 /* Mediaqueries breakpoints */
 /* Helper Classes */
 /* =============================================================================
@@ -34,111 +31,76 @@ html {
    Typography
    ========================================================================== */
 /* Margins & Paddings */
-/* line 1, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/utils/_mixins.scss */
 .foo {
-  border: 1px solid red;
-}
+  border: 1px solid red; }
 
 /** Buttons **/
 /*@import 'utils/_icons';
 //@import 'utils/_preloader';
 @import 'base/_ui';
 @import 'base/_media';*/
-/* line 1, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 dt {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 /** depends on font-fammily**/
 /* =============================================================================
-   Variables & Mixins
-   ========================================================================== */
-/* line 19, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
+  Variables & Mixins
+  ========================================================================== */
 h3 {
   font-size: 1.2em;
   font-weight: bold;
   /*    @media screen and (min-device-width:$screen-lg){
-        font-size: 1.43vW;
-    }*/
+          font-size: 1.43vW;
+      }*/
   line-height: 1.2;
   margin-top: 1em;
-  margin-bottom: 0.5em;
-}
-
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
-  /* line 19, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-  h3 {
-    font-size: 1.2em;
-  }
-}
+  margin-bottom: 0.5em; }
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
+    h3 {
+      font-size: 1.2em; } }
 
 /* =============================================================================
    Basics
    ========================================================================== */
-/* line 48, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 html {
   font-size: 62.5%;
   -webkit-text-size-adjust: auto;
-  -ms-text-size-adjust: auto;
-}
+  -ms-text-size-adjust: auto; }
 
-/* line 50, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 html, body, button, input, select, textarea {
   font-family: "objektiv-mk3", Arial, Helvetica, sans-serif;
-  color: #333;
-}
+  color: #333; }
 
-/* line 54, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 ::-moz-selection {
   text-shadow: none;
   background: #404041;
   background-image: none !important;
-  color: #fff;
-}
+  color: #fff; }
 
-/* line 58, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 ::selection {
   text-shadow: none;
   background: #404041;
   background-image: none !important;
-  color: #fff;
-}
+  color: #fff; }
 
-/* line 26, C:/MAMP/htdocs/toolbox/bower_components/bourbon/css3/_selection.scss */
 .element::-moz-selection {
-  background-color: #ffbb52;
-}
-
-/* line 30, C:/MAMP/htdocs/toolbox/bower_components/bourbon/css3/_selection.scss */
+  background-color: #ffbb52; }
 .element::selection {
-  background-color: #ffbb52;
-}
+  background-color: #ffbb52; }
 
-/* line 68, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 body {
   text-rendering: optimizeLegibility;
   font-size: 14px;
   font-weight: 400;
-  line-height: 150%;
-}
+  line-height: 150%; }
 
-/* line 75, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 a, a:link {
   text-decoration: none;
-  cursor: pointer;
-}
-
-/* line 80, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
+  cursor: pointer; }
 a:visited {
-  opacity: .5;
-}
-
-/* line 83, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
+  opacity: .5; }
 a:visited, a:hover {
-  text-decoration: none !important;
-}
-
-/* line 86, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
+  text-decoration: none !important; }
 a.external:after {
   font-family: 'FontAwesome';
   content: "";
@@ -146,14 +108,10 @@ a.external:after {
   opacity: 1;
   margin-left: 0.5em;
   font-size: 0.8em;
-}
-
-/* line 89, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
+  speak: none; }
 #comments a, .post-details a {
-  color: #39b470 !important;
-}
+  color: #39b470 !important; }
 
-/* line 93, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 h1, h2, h3, h4, legend, .number, .widgettitle {
   font-family: "objektiv-mk3", Arial, Helvetica, sans-serif !important;
   text-rendering: optimizeLegibility;
@@ -163,107 +121,68 @@ h1, h2, h3, h4, legend, .number, .widgettitle {
   margin-bottom: 1em;
   color: red;
   line-height: 1.1;
-  color: #404041;
-}
+  color: #404041; }
+  h1.logo, h2.logo, h3.logo, h4.logo, legend.logo, .number.logo, .widgettitle.logo {
+    margin: 2em 0 .5em 0; }
+  h1 a, h2 a, h3 a, h4 a, legend a, .number a, .widgettitle a {
+    text-decoration: none;
+    color: #404041; }
 
-/* line 97, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-h1.logo, h2.logo, h3.logo, h4.logo, legend.logo, .number.logo, .widgettitle.logo {
-  margin: 2em 0 .5em 0;
-}
-
-/* line 100, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-h1 a, h2 a, h3 a, h4 a, legend a, .number a, .widgettitle a {
-  text-decoration: none;
-  color: #404041;
-}
-
-/* line 107, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 h1 {
   font-size: 21px;
   line-height: 1;
-  color: #000;
-}
+  color: #000; }
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 2em; } }
+  @media screen and (min-width: 480px) {
+    h1 {
+      font-size: 2em; }
+      .content > h1:first-child {
+        margin-top: 56px;
+        font-size: 1.2em;
+        padding: 0 28px;
+        font-weight: bold; } }
 
-@media screen and (max-width: 480px) {
-  /* line 107, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-  h1 {
-    font-size: 2em;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  /* line 107, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-  h1 {
-    font-size: 2em;
-  }
-  /* line 116, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-  .content > h1:first-child {
-    margin-top: 56px;
-    font-size: 1.2em;
-    padding: 0 28px;
-    font-weight: bold;
-  }
-}
-
-/* line 125, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 h2 {
   font-size: 28px;
   line-height: 1.2;
   font-weight: bold;
   letter-spacing: .05em;
-  margin-top: 28px;
-}
+  margin-top: 28px; }
+  h2:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 12%;
+    background: #39b470;
+    margin-top: .5em; }
 
-/* line 31, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/utils/_mixins.scss */
-h2:after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 12%;
-  background: #39b470;
-  margin-top: .5em;
-}
-
-/* line 138, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 h1 a:hover, h2 a:hover, h3 a:hover {
   text-decoration: none;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 145, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 h4, .h4, h5, .h5, h6, .h6 {
-  font-size: 1.2em;
-}
+  font-size: 1.2em; }
 
-/* line 150, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 legend border {
   width: 1px 0 0 0;
   style: solid;
   color: #ccc;
-  margin-top: 1em;
-}
+  margin-top: 1em; }
 
-/* line 160, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 p {
   margin: 0 0 1rem;
   font-family: inherit;
   font-size: 14px;
   font-weight: normal;
-  line-height: 150%;
-}
+  line-height: 150%; }
 
-/* line 168, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-a {
-  color: #404041;
-}
-
-/* line 172, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
+a .content {
+  color: #404041; }
 .page-template-template-maintenance a.post-edit-link {
   margin-top: 10vH;
-  display: block;
-}
-
-/* line 177, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
+  display: block; }
 a.post-edit-link:before {
   font-family: 'FontAwesome';
   content: "";
@@ -271,166 +190,106 @@ a.post-edit-link:before {
   opacity: 1;
   margin-left: 0;
   font-size: 1em;
-}
+  speak: none; }
 
-/* line 183, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 ul,
 ol {
-  padding-left: 1.5rem;
-}
+  padding-left: 1.5rem; }
+  ul li,
+  ol li {
+    line-height: 150%; }
 
-/* line 187, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-ul li,
-ol li {
-  line-height: 150%;
-}
-
-/* line 195, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 dl {
   margin: 0 0 1rem;
-  line-height: 150%;
-}
+  line-height: 150%; }
 
-/* line 200, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 dt {
   font-weight: bold;
-  /** oder **/
-}
+  /** oder **/ }
 
-/* line 206, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 dd {
-  margin: 0 0 0.5rem;
-}
+  margin: 0 0 0.5rem; }
 
-/* line 210, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 b, .bold, strong {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-/* line 213, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 p {
-  font-size: 1em;
-}
+  font-size: 1em; }
 
-/* line 217, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 blockquote {
   position: relative;
   margin: 1.5rem 1rem 1.5rem 3rem;
-  text-align: left;
-}
+  text-align: left; }
+  blockquote:before {
+    content: "“";
+    display: block;
+    position: absolute;
+    top: -1rem;
+    left: -3rem;
+    color: #737373;
+    font-size: 5rem;
+    line-height: 1; }
 
-/* line 226, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-blockquote:before {
-  content: "“";
-  display: block;
-  position: absolute;
-  top: -1rem;
-  left: -3rem;
-  color: #737373;
-  font-size: 5rem;
-  line-height: 1;
-}
-
-/* line 237, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 address {
-  font-style: normal;
-}
+  font-style: normal; }
+  .footer address p {
+    margin-bottom: 0.2rem;
+    font-size: .8rem; }
+  .footer address > div {
+    margin-bottom: 0.5rem; }
 
-/* line 241, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-.footer address p {
-  margin-bottom: 0.2rem;
-  font-size: .8rem;
-}
-
-/* line 245, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-.footer address > div {
-  margin-bottom: 0.5rem;
-}
-
-/* line 250, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 .text-left {
-  text-align: left;
-}
+  text-align: left; }
 
-/* line 251, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 .text-center {
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 252, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 .text-right {
-  text-align: right;
-}
+  text-align: right; }
 
-/* line 254, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 .text-muted {
-  color: #737373;
-}
+  color: #737373; }
 
-/* line 255, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 .text-smaller {
-  font-size: smaller;
-}
+  font-size: smaller; }
 
-/* line 256, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 .uppercase {
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 /*** tables ****/
-/* line 261, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 table {
   width: 100%;
-  margin-bottom: 2em;
-}
-
-/* line 264, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-table th {
-  text-align: left;
-  font-size: larger;
-}
-
-/* line 268, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-table tr:nth-child(odd) td {
-  background: #ebebeb;
-}
+  margin-bottom: 2em; }
+  table th {
+    text-align: left;
+    font-size: larger; }
+  table tr:nth-child(odd) td {
+    background: #ebebeb; }
 
 /**** Misc ***/
-/* line 271, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
   width: 1px;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 /* Kleinerer Text */
-/* line 279, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
 .s {
-  font-size: 0.9em;
-}
+  font-size: 0.9em; }
 
 @media screen and (min-width: 480px) {
-  /* line 282, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
   .lead, blockquote p {
     font-size: 1.143em;
     font-weight: inherit;
     line-height: inherit;
-    margin-bottom: 1.857em;
-  }
-  /* line 289, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-  article.banner .lead, article.banner blockquote p, blockquote article.banner p, .banner-caption .lead, .banner-caption blockquote p, blockquote .banner-caption p {
-    margin-bottom: 1em;
-  }
-  /* line 292, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_typography.scss */
-  .panel .lead, .panel blockquote p, blockquote .panel p {
-    font-size: 1em;
-  }
-}
+    margin-bottom: 1.857em; }
+    article.banner .lead, article.banner blockquote p, blockquote article.banner p, .banner-caption .lead, .banner-caption blockquote p, blockquote .banner-caption p {
+      margin-bottom: 1em; }
+    .panel .lead, .panel blockquote p, blockquote .panel p {
+      font-size: 1em; } }
 
 /* global box-sizing */
-/* line 2, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
 *,
 *:after,
 *:before {
@@ -438,10 +297,8 @@ table tr:nth-child(odd) td {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+  text-rendering: optimizeLegibility; }
 
-/* line 13, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
 .btn {
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -449,197 +306,128 @@ table tr:nth-child(odd) td {
   box-shadow: none;
   padding: 0.7em 1em;
   font-size: 1em;
-  line-height: 1;
-}
+  line-height: 1; }
+  @media screen and (max-width: 480px) {
+    .row.submit .btn {
+      margin-bottom: 1em; } }
+  .btn:hover, .btn:focus {
+    color: #fff; }
+  .btn.btn-inverse {
+    background-color: #000;
+    color: #fff;
+    background-image: none;
+    background-repeat: repeat-x;
+    border-color: transparent;
+    text-shadow: none; }
+    .button-group .btn.btn-inverse {
+      margin-right: 1em;
+      color: #fff; }
+  .btn.btn-small {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border-width: 0;
+    box-shadow: none;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    line-height: 1; }
+  .box .btn {
+    color: #fff; }
+  .btn[disabled] {
+    opacity: 1; }
 
-@media screen and (max-width: 480px) {
-  /* line 17, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
-  .row.submit .btn {
-    margin-bottom: 1em;
-  }
-}
-
-/* line 22, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
-.btn:hover, .btn:focus {
-  color: #fff;
-}
-
-/* line 25, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
-.btn.btn-inverse {
-  background-color: #000;
-  color: #fff;
-  background-image: none;
-  background-repeat: repeat-x;
-  border-color: transparent;
-  text-shadow: none;
-}
-
-/* line 33, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
-.button-group .btn.btn-inverse {
-  margin-right: 1em;
-  color: #fff;
-}
-
-/* line 38, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
-.btn.btn-small {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border-width: 0;
-  box-shadow: none;
-  padding: 5px 10px;
-  font-size: 0.85em;
-  line-height: 1;
-}
-
-/* line 41, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
-.box .btn {
-  color: #fff;
-}
-
-/* line 44, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
-.btn[disabled] {
-  opacity: 1;
-}
-
-/* line 48, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
 .iframe-elastic {
   position: relative;
   padding-bottom: 55%;
   padding-top: 15px;
   height: 0;
-  overflow: hidden;
-}
+  overflow: hidden; }
+  .iframe-elastic iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
-/* line 55, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
-.iframe-elastic iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* line 64, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_globals.scss */
 .no-display {
-  display: none;
-}
+  display: none; }
 
-/* line 1, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
 body:not(.page-template-template-maintenance),
 body:not(.error404) {
-  background: #FAFAFA;
-}
+  background: #FAFAFA; }
 
-/* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-.wrapper {
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 14px; } }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 28px; } }
+@media screen and (min-width: 480px) {
+  .wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+    .wrapper:before, .wrapper:after {
+      content: "";
+      display: table;
+      clear: both; } }
+.wrapper > .row {
   display: -webkit-box;
   display: -moz-box;
   display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (max-width: 480px) {
-  /* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  .wrapper {
-    padding: 14px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  .wrapper {
-    padding: 28px;
-  }
-  /* line 12, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  body > .header > .wrapper {
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-direction: row;
-  }
-  /* line 15, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  body > main > .wrapper {
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-direction: column;
-  }
-  /* line 17, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  body > main > .wrapper .sidebar {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  /* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  .wrapper {
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-direction: row;
-  }
-  /* line 24, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  .wrapper .content {
-    width: 75%;
-  }
-  /* line 27, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  .wrapper .sidebar {
-    width: 25%;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  /* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-  .wrapper {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/utils/_mixins.scss */
-  .wrapper:before, .wrapper:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
+  display: flex; }
+  @media screen and (max-width: 768px) {
+    body > .header > .wrapper > .wrapper > .row {
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-direction: row; }
+    body > main > .wrapper > .wrapper > .row {
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      box-orient: vertical;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-direction: column; }
+      body > main > .wrapper > .wrapper > .row .sidebar {
+        display: none; } }
+  @media screen and (max-width: 768px) {
+    .wrapper > .row {
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-direction: row; }
+      .wrapper > .row .content {
+        width: 75%; }
+      .wrapper > .row .sidebar {
+        width: 25%; } }
 
 @media screen and (min-width: 768px) {
-  /* line 38, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
   .header .logo {
     margin: 28px 0;
-    text-align: center;
-  }
-}
-
-/* line 44, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
+    text-align: center; } }
 .header .logo img {
   width: 300px;
   height: auto;
-  max-width: none;
-}
-
-/* line 49, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
+  max-width: none; }
 .header .logo span {
   font-weight: 700;
   text-transform: uppercase;
@@ -648,33 +436,22 @@ body:not(.error404) {
   text-align: center;
   color: #000;
   display: block;
-  margin-top: 28px;
-}
+  margin-top: 28px; }
 
-/* line 56, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
 .header-image {
   min-height: 25vH;
   max-height: 50vH;
   background-position: center center;
-  background-attachment: fixed;
-}
+  background-attachment: fixed; }
 
-/* line 63, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
 .sidebar {
-  margin: 28px 0;
-}
+  margin: 28px 0; }
+  .sidebar .search, .sidebar [class*="widget_"] {
+    padding: 28px 0; }
 
-/* line 65, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
-.sidebar .search, .sidebar [class*="widget_"] {
-  padding: 28px 0;
-}
-
-/* line 69, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_layout.scss */
 .footer {
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 1, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
 .page-template-template-maintenance, .error404, .archive {
   background: -webkit-linear-gradient(180deg, #cbcdd0, white) !important;
   background: linear-gradient(180deg, #cbcdd0, white) !important;
@@ -706,232 +483,227 @@ body:not(.error404) {
   justify-content: center;
   -ms-flex-pack: center;
   min-height: 100vH;
-  font-size: 14px;
-}
+  font-size: 14px; }
+  @media screen and (max-width: 568px) {
+    .page-template-template-maintenance, .error404, .archive {
+      background: #fff !important;
+      border: 1px solid #39b470; } }
+  @media screen and (min-width: 480px) {
+    .page-template-template-maintenance .wrapper-maintenance, .error404 .wrapper-maintenance, .archive .wrapper-maintenance {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2em;
+      padding: 0 14px; }
+      .page-template-template-maintenance .wrapper-maintenance:before, .page-template-template-maintenance .wrapper-maintenance:after, .error404 .wrapper-maintenance:before, .error404 .wrapper-maintenance:after, .archive .wrapper-maintenance:before, .archive .wrapper-maintenance:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .page-template-template-maintenance .wrapper-maintenance > div, .error404 .wrapper-maintenance > div, .archive .wrapper-maintenance > div {
+        margin: 28px 0; } }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .page-template-template-maintenance .wrapper-maintenance, .error404 .wrapper-maintenance, .archive .wrapper-maintenance {
+      padding: 0 14px; } }
+  .page-template-template-maintenance .wrapper-maintenance > main, .error404 .wrapper-maintenance > main, .archive .wrapper-maintenance > main {
+    background: #fff; }
+    @media screen and (orientation: landscape) {
+      .page-template-template-maintenance .wrapper-maintenance > main, .error404 .wrapper-maintenance > main, .archive .wrapper-maintenance > main {
+        min-width: 452px;
+        /*$screen-xs -$outer-grid*/ } }
+    @media screen and (min-width: 569px) {
+      .page-template-template-maintenance .wrapper-maintenance > main, .error404 .wrapper-maintenance > main, .archive .wrapper-maintenance > main {
+        -webkit-box-shadow: 5px 5px 0 0 rgba(57, 180, 112, 0.75);
+        box-shadow: 5px 5px 0 0 rgba(57, 180, 112, 0.75);
+        min-width: 480px; } }
+    .page-template-template-maintenance .wrapper-maintenance > main .logo, .error404 .wrapper-maintenance > main .logo, .archive .wrapper-maintenance > main .logo {
+      margin: 0 auto;
+      width: 75%; }
+    .page-template-template-maintenance .wrapper-maintenance > main article, .error404 .wrapper-maintenance > main article, .archive .wrapper-maintenance > main article {
+      padding: 0 28px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      box-orient: vertical;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-pack: distribute;
+      -moz-box-pack: distribute;
+      box-pack: distribute;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      -o-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: distribute; }
+      @media screen and (min-width: 568px) {
+        .page-template-template-maintenance .wrapper-maintenance > main article, .error404 .wrapper-maintenance > main article, .archive .wrapper-maintenance > main article {
+          padding: 63px 49px 56px 49px; } }
+  .page-template-template-maintenance h2, .error404 h2, .archive h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 1.05em;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .page-template-template-maintenance h2, .error404 h2, .archive h2 {
+        margin: 3vH 0; } }
+    @media screen and (min-width: 768px) {
+      .page-template-template-maintenance h2, .error404 h2, .archive h2 {
+        margin: 3vH 0 1vH; } }
+    .page-template-template-maintenance h2 em, .error404 h2 em, .archive h2 em {
+      font-weight: normal;
+      font-size: smaller;
+      text-transform: lowercase;
+      letter-spacing: 0; }
+    .page-template-template-maintenance h2:after, .error404 h2:after, .archive h2:after {
+      display: none; }
+  .page-template-template-maintenance address, .error404 address, .archive address {
+    font-weight: 400;
+    text-align: left; }
+    .page-template-template-maintenance address > div, .error404 address > div, .archive address > div {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: justify; }
+      @media screen and (max-width: 767px) and (orientation: portrait) {
+        .page-template-template-maintenance address > div, .error404 address > div, .archive address > div {
+          -webkit-box-orient: vertical;
+          -moz-box-orient: vertical;
+          box-orient: vertical;
+          -webkit-box-direction: normal;
+          -moz-box-direction: normal;
+          box-direction: normal;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-direction: column; }
+          .page-template-template-maintenance address > div:first-child, .error404 address > div:first-child, .archive address > div:first-child {
+            margin-bottom: 1em; }
+          .page-template-template-maintenance address > div a, .error404 address > div a, .archive address > div a {
+            padding: .5em 0; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) and (max-width: 767px) and (orientation: landscape) {
+    .page-template-template-maintenance address > div, .error404 address > div, .archive address > div {
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-direction: row; } }
 
-@media screen and (max-width: 568px) {
-  /* line 1, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance, .error404, .archive {
-    background: #fff !important;
-    border: 1px solid #39b470;
-  }
-}
+@media screen and (max-width: 1024px) {
+  #main-nav {
+    height: 0;
+    overflow: hidden; } }
 
-@media screen and (min-width: 480px) {
-  /* line 14, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance .wrapper-maintenance, .error404 .wrapper-maintenance, .archive .wrapper-maintenance {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    padding: 0 14px;
-  }
-  /* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/utils/_mixins.scss */
-  .page-template-template-maintenance .wrapper-maintenance:before, .page-template-template-maintenance .wrapper-maintenance:after, .error404 .wrapper-maintenance:before, .error404 .wrapper-maintenance:after, .archive .wrapper-maintenance:before, .archive .wrapper-maintenance:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  /* line 19, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance .wrapper-maintenance > div, .error404 .wrapper-maintenance > div, .archive .wrapper-maintenance > div {
-    margin: 28px 0;
-  }
-}
+.navbar-toggle {
+  position: relative; }
+  @media screen and (min-width: 1024px) {
+    .navbar-toggle input {
+      display: none; } }
+  @media screen and (max-width: 1024px) {
+    .navbar-toggle input:checked + #main-nav {
+      height: auto;
+      -webkit-transition: all, 0.2s, ease-out;
+      -moz-transition: all, 0.2s, ease-out;
+      transition: all, 0.2s, ease-out; } }
+  @media screen and (max-width: 1024px) {
+    .navbar-toggle .button {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .navbar-toggle .button:after {
+        font-family: 'FontAwesome';
+        content: "";
+        padding-right: 0;
+        opacity: 1;
+        margin-left: 0;
+        font-size: 3em;
+        speak: none; } }
 
-@media screen and (max-width: 480px) and (orientation: portrait) {
-  /* line 14, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance .wrapper-maintenance, .error404 .wrapper-maintenance, .archive .wrapper-maintenance {
-    padding: 0 14px;
-  }
-}
-
-/* line 27, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-.page-template-template-maintenance .wrapper-maintenance > main, .error404 .wrapper-maintenance > main, .archive .wrapper-maintenance > main {
+.sticky.navbar-toggle.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #fff;
-}
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background, 2s, ease-out;
+  -moz-transition: background, 2s, ease-out;
+  transition: background, 2s, ease-out;
+  z-index: 9999; }
+.sticky #main-nav {
+  -webkit-transition: all, 200ms, ease-out;
+  -moz-transition: all, 200ms, ease-out;
+  transition: all, 200ms, ease-out;
+  margin: 0 auto; }
+  .sticky #main-nav ul {
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
+  .sticky #main-nav li[class*="item"].home a {
+    text-indent: -9999px;
+    display: block;
+    overflow: hidden;
+    background: transparent url("../img/logo-av-small.svg") no-repeat left center;
+    height: 2em;
+    width: 4em; }
+  .sticky #main-nav li[class*="item"].home:after {
+    display: none; }
 
-@media screen and (orientation: landscape) {
-  /* line 27, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance .wrapper-maintenance > main, .error404 .wrapper-maintenance > main, .archive .wrapper-maintenance > main {
-    min-width: 452px;
-    /*$screen-xs -$outer-grid*/
-  }
-}
-
-@media screen and (min-width: 569px) {
-  /* line 27, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance .wrapper-maintenance > main, .error404 .wrapper-maintenance > main, .archive .wrapper-maintenance > main {
-    -webkit-box-shadow: 5px 5px 0 0 rgba(57, 180, 112, 0.75);
-    box-shadow: 5px 5px 0 0 rgba(57, 180, 112, 0.75);
-    min-width: 480px;
-  }
-}
-
-/* line 38, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-.page-template-template-maintenance .wrapper-maintenance > main .logo, .error404 .wrapper-maintenance > main .logo, .archive .wrapper-maintenance > main .logo {
-  margin: 0 auto;
-  width: 75%;
-}
-
-/* line 42, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-.page-template-template-maintenance .wrapper-maintenance > main article, .error404 .wrapper-maintenance > main article, .archive .wrapper-maintenance > main article {
-  padding: 0 28px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
-}
-
-@media screen and (min-width: 568px) {
-  /* line 42, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance .wrapper-maintenance > main article, .error404 .wrapper-maintenance > main article, .archive .wrapper-maintenance > main article {
-    padding: 63px 49px 56px 49px;
-  }
-}
-
-/* line 54, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-.page-template-template-maintenance h2, .error404 h2, .archive h2 {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-size: 1.05em;
-  text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-  /* line 54, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance h2, .error404 h2, .archive h2 {
-    margin: 3vH 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  /* line 54, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance h2, .error404 h2, .archive h2 {
-    margin: 3vH 0 1vH;
-  }
-}
-
-/* line 67, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-.page-template-template-maintenance h2 em, .error404 h2 em, .archive h2 em {
-  font-weight: normal;
-  font-size: smaller;
-  text-transform: lowercase;
-  letter-spacing: 0;
-}
-
-/* line 73, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-.page-template-template-maintenance h2:after, .error404 h2:after, .archive h2:after {
-  display: none;
-}
-
-/* line 77, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-.page-template-template-maintenance address, .error404 address, .archive address {
-  font-weight: 400;
-  text-align: left;
-}
-
-/* line 80, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-.page-template-template-maintenance address > div, .error404 address > div, .archive address > div {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
-}
-
-@media screen and (max-width: 767px) and (orientation: portrait) {
-  /* line 80, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance address > div, .error404 address > div, .archive address > div {
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-direction: column;
-  }
-  /* line 85, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance address > div:first-child, .error404 address > div:first-child, .archive address > div:first-child {
-    margin-bottom: 1em;
-  }
-  /* line 88, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance address > div a, .error404 address > div a, .archive address > div a {
-    padding: .5em 0;
-  }
-}
-
-@media screen and (max-width: 767px) and (orientation: portrait) and (max-width: 767px) and (orientation: landscape) {
-  /* line 80, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_maintenance.scss */
-  .page-template-template-maintenance address > div, .error404 address > div, .archive address > div {
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-direction: row;
-  }
-}
-
-/* line 1, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.button.toggle {
-  display: block;
-  position: relative;
-}
-
-/* line 4, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.button.toggle:after {
-  font-family: 'FontAwesome';
-  content: "";
-  padding-right: 0;
-  opacity: 1;
-  margin-left: 0;
-  font-size: 3em;
-}
-
-@media screen and (min-width: 992px) {
-  /* line 9, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-  body > nav > ul {
+@media screen and (min-width: 1024px) {
+  nav#main-nav {
     max-width: 90%;
     margin: 0 auto;
     z-index: 2;
@@ -951,144 +723,72 @@ body:not(.error404) {
     -o-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center;
-    margin: 28px auto;
-  }
-}
+    margin: 28px auto; } }
+  @media screen and (min-width: 1024px) and (min-width: 1200px) {
+    nav#main-nav {
+      width: 1140px; } }
 
-@media screen and (min-width: 992px) and (min-width: 1200px) {
-  /* line 9, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-  body > nav > ul {
-    width: 1140px;
-  }
-}
-
-/* line 17, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-nav.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  -webkit-transition: background, 2s, ease-out;
-  -moz-transition: background, 2s, ease-out;
-  transition: background, 2s, ease-out;
-  z-index: 9999;
-}
-
-/* line 28, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
 .menu-item {
   list-style: none;
   font-family: "objektiv-mk3", Arial, Helvetica, sans-serif !important;
   text-transform: uppercase;
   font-weight: 400;
-}
+  color: #404041; }
+  .menu-item > a {
+    color: inherit; }
+  .menu-item.menu-item-has-children > a:after {
+    font-family: 'FontAwesome';
+    content: "";
+    padding-right: 0;
+    opacity: 1;
+    margin-left: 0.5em;
+    font-size: 1em;
+    speak: none;
+    color: #39b470; }
+  @media screen and (max-width: 480px) {
+    .menu-item {
+      display: block; } }
+  @media screen and (min-width: 481px) {
+    .menu-item {
+      position: relative; }
+      #main-nav > ul > .menu-item {
+        display: inline-block; }
+        #main-nav > ul > .menu-item:after {
+          content: "/";
+          font-weight: bold;
+          color: #39b470;
+          padding: 0 .5em; } }
+  .menu-item:hover > .sub-menu {
+    opacity: 1;
+    top: 21px; }
+  .sub-menu .menu-item {
+    border-bottom: 1px solid #39b470;
+    padding: 1.5rem 0;
+    line-height: 1.2;
+    text-transform: none;
+    white-space: nowrap; }
+    .sub-menu .menu-item:last-of-type {
+      border: 0; }
 
-/* line 31, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-#main-nav .menu-item {
-  position: relative;
-  display: inline-block;
-}
-
-/* line 34, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.sub-menu #main-nav .menu-item {
-  border-bottom: 1px solid #39b470;
-  padding: 1.5rem 0;
-  line-height: 1.2;
-  text-transform: none;
-  white-space: nowrap;
-}
-
-/* line 40, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.sub-menu #main-nav .menu-item:after {
-  display: none;
-}
-
-/* line 43, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.sub-menu #main-nav .menu-item:last-child {
-  border: 0;
-}
-
-/* line 44, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.sub-menu #main-nav .menu-item > a {
-  color: white;
-}
-
-/* line 46, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-#main-nav .menu-item:after {
-  content: "/";
-  font-weight: bold;
-  color: #39b470;
-  padding: 0 .5em;
-}
-
-/* line 53, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-#main-nav .menu-item:hover > .sub-menu {
-  /*             display:block;*/
-  opacity: 1;
-  top: 42px;
-}
-
-/* line 60, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-#main-nav .menu-item > .sub-menu {
-  /*       display:none;*/
-}
-
-@media screen and (min-width: 992px) {
-  /* line 60, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-  #main-nav .menu-item > .sub-menu {
-    opacity: 0;
-    min-width: 10vW;
-    position: absolute;
-    top: 70px;
+@media screen and (min-width: 480px) {
+  .sub-menu {
     background: rgba(0, 0, 0, 0.75);
-    z-index: 10;
     -webkit-box-shadow: 5px 5px 0 0 rgba(57, 180, 112, 0.75);
     box-shadow: 5px 5px 0 0 rgba(57, 180, 112, 0.75);
     padding: 0 2rem;
+    position: absolute;
+    top: 70px;
+    z-index: 10;
+    min-width: 10vW;
+    opacity: 0;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
-  /* line 72, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-  #main-nav .menu-item > .sub-menu .sub-menu {
-    left: 28px;
-  }
-}
+    transition: all 0.2s ease-in-out; }
+    .sub-menu a {
+      color: white !important; }
+    .sub-menu .sub-menu {
+      left: 100%; } }
 
-/* line 79, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-#offCanvas .menu-item {
-  padding: 14px 0;
-}
-
-/* line 86, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.menu-item.menu-item-has-children > a:after {
-  font-family: 'FontAwesome';
-  content: "";
-  padding-right: 0;
-  opacity: 1;
-  margin-left: 0.5em;
-  font-size: 1em;
-  color: #39b470;
-}
-
-@media screen and (max-width: 768px) {
-  /* line 91, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-  #main-nav {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  /* line 96, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-  #offCanvas {
-    display: none;
-  }
-}
-
-/* line 101, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
 .pagination {
   display: -webkit-box;
   display: -moz-box;
@@ -1105,33 +805,19 @@ nav.sticky {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center;
-}
+  -ms-flex-pack: center; }
+  .pagination * {
+    padding: .5em;
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    line-height: 1; }
+    .pagination *:first-child {
+      border: 0; }
+  .pagination a {
+    color: #39b470; }
+  .pagination span {
+    color: #333; }
 
-/* line 104, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.pagination * {
-  padding: .5em;
-  display: inline-block;
-  border-left: 1px solid #ccc;
-  line-height: 1;
-}
-
-/* line 109, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.pagination *:first-child {
-  border: 0;
-}
-
-/* line 111, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.pagination a {
-  color: #39b470;
-}
-
-/* line 112, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/modules/_navigation.scss */
-.pagination span {
-  color: #333;
-}
-
-/* line 1, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
 article {
   display: block;
   background: white;
@@ -1139,210 +825,134 @@ article {
   position: relative;
   max-width: 95%;
   margin: 0 auto 28px;
-  padding: 28px;
-}
+  padding: 28px; }
+  .page-template-template-maintenance article, .error404 article, .archive article {
+    border: 0; }
+  article .home.has-post-thumbnail, article .archive.has-post-thumbnail, article .author.has-post-thumbnail {
+    float: left;
+    margin-right: 14px; }
+  article .post-details {
+    font-size: 1.2rem;
+    color: #333; }
+    article .post-details:before, article .post-details:after {
+      content: "";
+      display: table;
+      clear: both; }
+    article .post-details.top {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 14px;
+      margin-bottom: 28px; }
+    article .post-details.bottom {
+      border-top: 1px solid #ccc;
+      padding-top: 14px;
+      margin-top: 28px; }
+    article .post-details .comments {
+      float: right; }
+  article .post-edit-link {
+    color: #333;
+    display: block;
+    text-align: right; }
+  article #comments {
+    margin-top: 56px;
+    padding-top: 56px;
+    border-top: 1px solid #ccc; }
 
-/* line 9, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
-.page-template-template-maintenance article, .error404 article, .archive article {
-  border: 0;
-}
-
-/* line 11, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
-article .home.has-post-thumbnail, article .archive.has-post-thumbnail, article .author.has-post-thumbnail {
-  float: left;
-  margin-right: 14px;
-}
-
-/* line 17, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
-article .post-details {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/utils/_mixins.scss */
-article .post-details:before, article .post-details:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 21, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
-article .post-details.top {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 14px;
-  margin-bottom: 28px;
-}
-
-/* line 26, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
-article .post-details.bottom {
-  border-top: 1px solid #ccc;
-  padding-top: 14px;
-  margin-top: 28px;
-}
-
-/* line 31, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
-article .post-details .comments {
-  float: right;
-}
-
-/* line 34, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
-article .post-edit-link {
-  color: #333;
-  display: block;
-  text-align: right;
-}
-
-/* line 39, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_content.scss */
-article #comments {
-  margin-top: 56px;
-  padding-top: 56px;
-  border-top: 1px solid #ccc;
-}
-
-/*------------------------------------*    WORDPRESS CORE
+/*------------------------------------*\
+    WORDPRESS CORE
 \*------------------------------------*/
-/* line 4, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 img {
   max-width: 100%;
-  height: auto;
-}
+  height: auto; }
+  .logo img {
+    max-width: none;
+    width: 100%;
+    height: auto; }
+  img[class*="wp-image"].alignleft, a img[class*="wp-image"].alignleft {
+    display: inline;
+    float: left;
+    margin-right: 14px; }
+  img[class*="wp-image"].alignright, a img[class*="wp-image"].alignright {
+    display: inline;
+    float: right;
+    margin-left: 14px; }
+  img[class*="wp-image"].aligncenter, a img[class*="wp-image"].aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px; }
+  img[class*="wp-image"].alignnone, a img[class*="wp-image"].alignnone {
+    display: block;
+    margin-bottom: 14px; }
 
-/* line 7, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.logo img {
-  max-width: none;
-  width: 100%;
-  height: auto;
-}
-
-/* line 13, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-img[class*="wp-image"].alignleft,
-a img[class*="wp-image"].alignleft {
-  display: inline;
-  float: left;
-  margin-right: 14px;
-}
-
-/* line 20, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-img[class*="wp-image"].alignright,
-a img[class*="wp-image"].alignright {
-  display: inline;
-  float: right;
-  margin-left: 14px;
-}
-
-/* line 26, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-img[class*="wp-image"].aligncenter,
-a img[class*="wp-image"].aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 14px;
-}
-
-/* line 34, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-img[class*="wp-image"].alignnone,
-a img[class*="wp-image"].alignnone {
-  display: block;
-  margin-bottom: 14px;
-}
-
-/* line 41, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 div.aligncenter {
   clear: both;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 14px;
-}
+  margin-bottom: 14px; }
 
-/* line 49, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .wp-caption {
   background: #FAFAFA;
   border: 1px solid #ccc;
   max-width: 96%;
   padding: .5rem .3rem 1rem;
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 56, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .wp-caption.alignnone {
-  margin: .5rem 2rem 2rem;
-}
+  margin: .5rem 2rem 2rem; }
 
-/* line 59, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .wp-caption.alignleft {
-  margin: .5rem 2rem 2rem 0;
-}
+  margin: .5rem 2rem 2rem 0; }
 
-/* line 62, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .wp-caption.alignright {
-  margin: .5rem 0 2rem 2rem;
-}
+  margin: .5rem 0 2rem 2rem; }
 
-/* line 65, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
   margin: 0;
   max-width: 98.5%;
   padding: 0;
-  width: auto;
-}
+  width: auto; }
 
-/* line 73, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .wp-caption .wp-caption-text,
 .gallery-caption {
   font-size: 1.1rem;
   line-height: 1.7rem;
   margin: 0;
-  padding: 0 .4rem .5rem;
-}
+  padding: 0 .4rem .5rem; }
 
 /*------------------------------------------------
 Nivo Lightbox
 --------------------------------------------------*/
-/* line 84, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .nivo-lightbox-overlay.nivo-lightbox-open {
   background-color: #404040;
-  background-color: rgba(0, 0, 0, 0.75);
-}
+  background-color: rgba(0, 0, 0, 0.75); }
 
-/* line 88, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 a[class*="nivo-lightbox"] {
-  color: white;
-}
+  color: white; }
 
-/* line 89, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .nivo-lightbox-nav, .nivo-lightbox-close {
   display: block;
   background: transparent url(../img/nivo-icons.png) no-repeat 0% 0%;
   width: 26px;
-  height: 26px;
-}
+  height: 26px; }
 
-/* line 96, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .nivo-lightbox-close {
   top: 10%;
-  right: 10%;
-}
+  right: 10%; }
 
-/* line 101, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .nivo-lightbox-nav.nivo-lightbox-prev {
   left: 10%;
-  background-position: 0% 100%;
-}
-
-/* line 105, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
+  background-position: 0% 100%; }
 .nivo-lightbox-nav.nivo-lightbox-next {
   right: 10%;
-  background-position: 0% 50%;
-}
+  background-position: 0% 50%; }
 
 /*------------------------------------------------
 gallery
 --------------------------------------------------*/
-/* line 113, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 [class*='gallery-columns'] {
   display: -webkit-box;
   display: -moz-box;
@@ -1363,126 +973,88 @@ gallery
   -moz-flex-grow: 1;
   flex-grow: 1;
   -ms-flex-positive: 1;
-  margin: -1em;
-}
+  margin: -1em; }
 
-/* line 120, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
 .gallery-item {
-  margin: 1em;
-}
+  margin: 1em; }
+  .gallery-item a {
+    display: block;
+    width: inherit; }
+    .gallery-item a img {
+      -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: auto; }
+  .gallery-columns-1 .gallery-item {
+    -webkit-flex-basis: calc(100%/1 - 2em);
+    -moz-flex-basis: calc(100%/1 - 2em);
+    flex-basis: calc(100%/1 - 2em);
+    -ms-flex-preferred-size: calc(100%/1 - 2em);
+    -ms-flex-preferred-size: calc(100%/1 - 2.5em); }
+  .gallery-columns-2 .gallery-item {
+    -webkit-flex-basis: calc(100%/2 - 2em);
+    -moz-flex-basis: calc(100%/2 - 2em);
+    flex-basis: calc(100%/2 - 2em);
+    -ms-flex-preferred-size: calc(100%/2 - 2em);
+    -ms-flex-preferred-size: calc(100%/2 - 2.5em); }
+  .gallery-columns-3 .gallery-item {
+    -webkit-flex-basis: calc(100%/3 - 2em);
+    -moz-flex-basis: calc(100%/3 - 2em);
+    flex-basis: calc(100%/3 - 2em);
+    -ms-flex-preferred-size: calc(100%/3 - 2em);
+    -ms-flex-preferred-size: calc(100%/3 - 2.5em); }
+  .gallery-columns-4 .gallery-item {
+    -webkit-flex-basis: calc(100%/4 - 2em);
+    -moz-flex-basis: calc(100%/4 - 2em);
+    flex-basis: calc(100%/4 - 2em);
+    -ms-flex-preferred-size: calc(100%/4 - 2em);
+    -ms-flex-preferred-size: calc(100%/4 - 2.5em); }
+  .gallery-columns-5 .gallery-item {
+    -webkit-flex-basis: calc(100%/5 - 2em);
+    -moz-flex-basis: calc(100%/5 - 2em);
+    flex-basis: calc(100%/5 - 2em);
+    -ms-flex-preferred-size: calc(100%/5 - 2em);
+    -ms-flex-preferred-size: calc(100%/5 - 2.5em); }
+  .gallery-columns-6 .gallery-item {
+    -webkit-flex-basis: calc(100%/6 - 2em);
+    -moz-flex-basis: calc(100%/6 - 2em);
+    flex-basis: calc(100%/6 - 2em);
+    -ms-flex-preferred-size: calc(100%/6 - 2em);
+    -ms-flex-preferred-size: calc(100%/6 - 2.5em); }
+  .gallery-columns-7 .gallery-item {
+    -webkit-flex-basis: calc(100%/7 - 2em);
+    -moz-flex-basis: calc(100%/7 - 2em);
+    flex-basis: calc(100%/7 - 2em);
+    -ms-flex-preferred-size: calc(100%/7 - 2em);
+    -ms-flex-preferred-size: calc(100%/7 - 2.5em); }
+  .gallery-columns-8 .gallery-item {
+    -webkit-flex-basis: calc(100%/8 - 2em);
+    -moz-flex-basis: calc(100%/8 - 2em);
+    flex-basis: calc(100%/8 - 2em);
+    -ms-flex-preferred-size: calc(100%/8 - 2em);
+    -ms-flex-preferred-size: calc(100%/8 - 2.5em); }
+  .gallery-columns-9 .gallery-item {
+    -webkit-flex-basis: calc(100%/9 - 2em);
+    -moz-flex-basis: calc(100%/9 - 2em);
+    flex-basis: calc(100%/9 - 2em);
+    -ms-flex-preferred-size: calc(100%/9 - 2em);
+    -ms-flex-preferred-size: calc(100%/9 - 2.5em); }
 
-/* line 123, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-item a {
-  display: block;
-  width: inherit;
-}
-
-/* line 126, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-item a img {
-  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: auto;
-}
-
-/* line 133, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-1 .gallery-item {
-  -webkit-flex-basis: calc(100%/1 - 2em);
-  -moz-flex-basis: calc(100%/1 - 2em);
-  flex-basis: calc(100%/1 - 2em);
-  -ms-flex-preferred-size: calc(100%/1 - 2em);
-  -ms-flex-preferred-size: calc(100%/1 - 2.5em);
-}
-
-/* line 137, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-2 .gallery-item {
-  -webkit-flex-basis: calc(100%/2 - 2em);
-  -moz-flex-basis: calc(100%/2 - 2em);
-  flex-basis: calc(100%/2 - 2em);
-  -ms-flex-preferred-size: calc(100%/2 - 2em);
-  -ms-flex-preferred-size: calc(100%/2 - 2.5em);
-}
-
-/* line 141, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-3 .gallery-item {
-  -webkit-flex-basis: calc(100%/3 - 2em);
-  -moz-flex-basis: calc(100%/3 - 2em);
-  flex-basis: calc(100%/3 - 2em);
-  -ms-flex-preferred-size: calc(100%/3 - 2em);
-  -ms-flex-preferred-size: calc(100%/3 - 2.5em);
-}
-
-/* line 145, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-4 .gallery-item {
-  -webkit-flex-basis: calc(100%/4 - 2em);
-  -moz-flex-basis: calc(100%/4 - 2em);
-  flex-basis: calc(100%/4 - 2em);
-  -ms-flex-preferred-size: calc(100%/4 - 2em);
-  -ms-flex-preferred-size: calc(100%/4 - 2.5em);
-}
-
-/* line 149, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-5 .gallery-item {
-  -webkit-flex-basis: calc(100%/5 - 2em);
-  -moz-flex-basis: calc(100%/5 - 2em);
-  flex-basis: calc(100%/5 - 2em);
-  -ms-flex-preferred-size: calc(100%/5 - 2em);
-  -ms-flex-preferred-size: calc(100%/5 - 2.5em);
-}
-
-/* line 153, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-6 .gallery-item {
-  -webkit-flex-basis: calc(100%/6 - 2em);
-  -moz-flex-basis: calc(100%/6 - 2em);
-  flex-basis: calc(100%/6 - 2em);
-  -ms-flex-preferred-size: calc(100%/6 - 2em);
-  -ms-flex-preferred-size: calc(100%/6 - 2.5em);
-}
-
-/* line 157, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-7 .gallery-item {
-  -webkit-flex-basis: calc(100%/7 - 2em);
-  -moz-flex-basis: calc(100%/7 - 2em);
-  flex-basis: calc(100%/7 - 2em);
-  -ms-flex-preferred-size: calc(100%/7 - 2em);
-  -ms-flex-preferred-size: calc(100%/7 - 2.5em);
-}
-
-/* line 161, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-8 .gallery-item {
-  -webkit-flex-basis: calc(100%/8 - 2em);
-  -moz-flex-basis: calc(100%/8 - 2em);
-  flex-basis: calc(100%/8 - 2em);
-  -ms-flex-preferred-size: calc(100%/8 - 2em);
-  -ms-flex-preferred-size: calc(100%/8 - 2.5em);
-}
-
-/* line 165, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_media.scss */
-.gallery-columns-9 .gallery-item {
-  -webkit-flex-basis: calc(100%/9 - 2em);
-  -moz-flex-basis: calc(100%/9 - 2em);
-  flex-basis: calc(100%/9 - 2em);
-  -ms-flex-preferred-size: calc(100%/9 - 2em);
-  -ms-flex-preferred-size: calc(100%/9 - 2.5em);
-}
-
-/* line 1, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 .btn:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
-.btn input[type="button"]:focus,
+.btn
+input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
 .btn:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  outline: none;
-}
+  outline: none; }
 
-/* line 15, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 .btn,
 input[type="button"],
 input[type="reset"],
@@ -1496,10 +1068,8 @@ input[type="submit"] {
   font-size: 1em;
   line-height: 1;
   background: #000;
-  color: #fff;
-}
+  color: #fff; }
 
-/* line 24, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 input[type="text"],
 input[type="date"],
 input[type="email"],
@@ -1513,55 +1083,41 @@ select {
   border-radius: 0;
   overflow: hidden;
   border: 1px solid #ccc;
-  padding: 2% 5%;
-}
+  padding: 2% 5%; }
+  @media screen and (max-width: 480px) {
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="confirm_email"],
+    input[type="number"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%; } }
+  @media screen and (min-device-width: 769px) and (orientation: portrait) {
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="confirm_email"],
+    input[type="number"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 90%;
+      /*_NO__DOTCOMMA__AFTER__ */ } }
 
-@media screen and (max-width: 480px) {
-  /* line 24, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-  input[type="text"],
-  input[type="date"],
-  input[type="email"],
-  input[type="confirm_email"],
-  input[type="number"],
-  input[type="tel"],
-  textarea,
-  select {
-    width: 100%;
-  }
-}
-
-@media screen and (min-device-width: 769px) and (orientation: portrait) {
-  /* line 24, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-  input[type="text"],
-  input[type="date"],
-  input[type="email"],
-  input[type="confirm_email"],
-  input[type="number"],
-  input[type="tel"],
-  textarea,
-  select {
-    width: 90%;
-    /*_NO__DOTCOMMA__AFTER__ */
-  }
-}
-
-/* line 44, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin: 0;
-}
+  margin: 0; }
 
-/* line 49, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 input[type=number] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
-  appearance: textfield;
-}
+  appearance: textfield; }
 
-/* line 51, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 body:not(.ie) select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1570,125 +1126,73 @@ body:not(.ie) select {
   background-image: url("../img/bg-select.png");
   background-position: 98% 50%;
   background-repeat: no-repeat;
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 61, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 textarea {
   max-height: 120px;
   overflow: auto;
-  resize: vertical;
-}
+  resize: vertical; }
 
-/* line 66, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 label {
   font-weight: 400;
-  display: block;
-}
+  display: block; }
 
-/* line 70, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 .wpcf7 {
-  margin-bottom: 2em;
-}
+  margin-bottom: 2em; }
+  .wpcf7 .row {
+    margin-right: 0;
+    margin-left: 0; }
+  .wpcf7 .row.submit {
+    margin-top: 2em;
+    text-align: right; }
+  .wpcf7 .row:not(.submit) {
+    margin-bottom: 28px; }
+  .wpcf7 .row.checkbox > [class*="-12"] {
+    padding: 0;
+    margin: 0; }
+  .wpcf7 img#captcha {
+    max-width: none;
+    width: auto;
+    height: 36px;
+    margin-right: 1em; }
 
-/* line 72, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7 .row {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-/* line 78, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7 .row.submit {
-  margin-top: 2em;
-  text-align: right;
-}
-
-/* line 82, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7 .row:not(.submit) {
-  margin-bottom: 28px;
-}
-
-/* line 85, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7 .row.checkbox > [class*="-12"] {
-  padding: 0;
-  margin: 0;
-}
-
-/* line 89, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7 img#captcha {
-  max-width: none;
-  width: auto;
-  height: 36px;
-  margin-right: 1em;
-}
-
-/* line 96, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 .wpcf7-form-control-wrap {
   display: block;
-  width: 100%;
-}
+  width: 100%; }
+  .wpcf7-form-control-wrap > * {
+    width: 100%; }
+  .wpcf7-form-control-wrap input[type="checkbox"] {
+    position: static;
+    margin-top: 0;
+    margin-left: 1em; }
+  .wpcf7-form-control-wrap input[type="checkbox"].wpcf7-acceptance {
+    float: left;
+    height: 1em;
+    width: 1em;
+    margin-right: 1em;
+    /*left:0;*/
+    /*        margin-bottom:2em;*/ }
+  .wpcf7-form-control-wrap > .wpcf7-checkbox {
+    display: block;
+    /*special for Contact/Appointments*/ }
+    .wpcf7-form-control-wrap > .wpcf7-checkbox#time {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto; }
+      .wpcf7-form-control-wrap > .wpcf7-checkbox#time:before, .wpcf7-form-control-wrap > .wpcf7-checkbox#time:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .wpcf7-form-control-wrap > .wpcf7-checkbox#time .wpcf7-list-item {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%; }
+        .wpcf7-form-control-wrap > .wpcf7-checkbox#time .wpcf7-list-item:last-child {
+          margin-right: 0; }
+      .wpcf7-form-control-wrap > .wpcf7-checkbox#time .wpcf7-list-item:nth-child(even) {
+        margin-right: 0; }
 
-/* line 99, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7-form-control-wrap > * {
-  width: 100%;
-}
-
-/* line 102, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7-form-control-wrap input[type="checkbox"] {
-  position: static;
-  margin-top: 0;
-  margin-left: 1em;
-}
-
-/* line 109, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7-form-control-wrap input[type="checkbox"].wpcf7-acceptance {
-  float: left;
-  height: 1em;
-  width: 1em;
-  margin-right: 1em;
-  margin-/*left:0;*/
-  /*        margin-bottom:2em;*/
-}
-
-/* line 118, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7-form-control-wrap > .wpcf7-checkbox {
-  display: block;
-  /*special for Contact/Appointments*/
-}
-
-/* line 121, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7-form-control-wrap > .wpcf7-checkbox#time {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* line 5, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/utils/_mixins.scss */
-.wpcf7-form-control-wrap > .wpcf7-checkbox#time:before, .wpcf7-form-control-wrap > .wpcf7-checkbox#time:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 124, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7-form-control-wrap > .wpcf7-checkbox#time .wpcf7-list-item {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-}
-
-/* line 89, C:/MAMP/htdocs/toolbox/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
-.wpcf7-form-control-wrap > .wpcf7-checkbox#time .wpcf7-list-item:last-child {
-  margin-right: 0;
-}
-
-/* line 127, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
-.wpcf7-form-control-wrap > .wpcf7-checkbox#time .wpcf7-list-item:nth-child(even) {
-  margin-right: 0;
-}
-
-/* line 134, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 .wpcf7-not-valid,
 .wpcf7-validation-errors,
 .wpcf7-message-mail-sent-ng,
@@ -1696,19 +1200,15 @@ label {
 .wpcf7-message-invalid-email,
 .wpcf7-message-upload-failed-php-error {
   border: 2px solid #DB221C !important;
-  background: #fcf8e3;
-}
+  background: #fcf8e3; }
 
-/* line 143, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 .wpcf7-message-accept-terms,
 .wpcf7-message-upload-failed,
 .wpcf7-message-upload-file-type-invalid,
 .wpcf7-message-upload-file-too-large {
   background: #DB221C;
-  color: #fff;
-}
+  color: #fff; }
 
-/* line 150, C:/MAMP/htdocs/almathea-ventures/wp-content/themes/amalthea-ventures/scss/base/_forms.scss */
 .wpcf7-mail-sent-ok {
   font-size: large;
   color: #21A356;
@@ -1716,8 +1216,7 @@ label {
   line-height: 2;
   padding: 2em;
   border: 0;
-  background: transparent;
-}
+  background: transparent; }
 
 /*
 
@@ -1733,4 +1232,4 @@ label {
 @import 'modules/_widgets';
 @import 'modules/_posts';*/
 
-/*# sourceMappingURL=../css/screen.map */
+/*# sourceMappingURL=screen.css.map */
