@@ -1,4 +1,4 @@
-.foo{
+@mixin foo{
     border:1px solid $foo;
 }
 @mixin clearfix{

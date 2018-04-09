@@ -19,6 +19,10 @@
         $(window).scroll(stickyNav);
         
         //stickybits('.fixedsticky', {useStickyClasses: true});
+        
+         // Nav Button
+        var navButton = $('.menu-item > a');
+        var tapped = false;
 
     });
     
