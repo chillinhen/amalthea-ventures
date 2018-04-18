@@ -1,131 +1,122 @@
-.navbar-toggle{
-    position: relative;
-    input{
-        display:none;
-        @media screen and (max-width:$screen-pad-landscape - 1){
-            &:checked + #main-nav {
-                height:auto;       
-                @include transition (all, .2s, ease-out);
-            }
-        }
-    }
-    .button{
-        @media screen and (max-width:$screen-pad-landscape - 1){
+/** navigation Items */
+li[class*="item"]{
+    list-style: none;
+    position:relative;
+    &.menu-item-has-children {
+        > .icon{
             position:absolute;
-            top:0;
-            right:0;
+            top: 1.125rem;
+            right: 1.5rem;
+            display:inline-block;
             &:after{
-                @include icon-style ("\f0c9", 0, 1, 0, 3em);
+                @include icon-style ("\f0d7", 0, 1, .5em, 1em);
+                color:$brand-secondary;
+                @media screen and (max-width:$screen-pad-landscape - 1){font-size:2em;}
             }
+            &.open:after{content:"\f0da";}
         }
     }
-    &.sticky{@include sticky-menu;}
-}
-nav#main-nav{
-    @include transition (all, 200ms, ease-out);
-    margin:0 auto;
-    @media screen and (max-width:$screen-xs){
-        margin:0 -$outer-grid;
+    
+    header nav > ul & {
+        @include main-menu(400,$brand-primary);
     }
-    @media screen and (max-width:$screen-pad-landscape - 1){
-        height:0;
-        overflow:hidden;
+    nav#off-nav ul & {
+        @include main-menu(400,white);
+        text-align:left;
+        a{
+            display:block;
+            position:relative;
+            font-family:$headings-font-family;
+            color:white;
+            line-height:1.2;
+            padding:1em;
+            border:{
+                width:0 0 2px 0;
+                style:solid;
+                color:currentColor;
+            }
+        }
+        .sub-menu > li{text-transform:none;}
+    }
+    
+}
+.sub-menu{
+    @media screen and (max-width:$screen-pad-landscape){
+        display:none;
+        &.show{
+            display:block;
+        }
+    }
+}
+/*responsive Display & Position*/
+.navbar-toggle{
+    @media screen and (max-width:$screen-xs){
+        position:fixed;
+    }
+    @media screen and (max-width:$screen-pad-landscape){
+        position:absolute;
+        top:1rem;
+        right:1rem;
+        z-index:99999;
+        @include toggle-nav-bar(44px,6px);
+        > span{
+            background: $brand-secondary;
+        }
+        &.open > span{
+            background:white;
+        }
+    }
+}
+#off-nav{
+    @media screen and (max-width:$screen-pad-landscape){
+        position: fixed;
+        top: -150%;
+        left: 0%;
+        right:0;
+        z-index: 9999;
+        bottom:100%;
+        background: rgba( $brand-primary, .9 );
+        opacity:0;
+        @include transition(all .25s ease-in-out);
+        overflow:scroll;
+        top: 0%;
+        bottom:0;
+
+        opacity:1;
+        &.open{
+            top: 0%;
+            bottom:0;
+
+            opacity:1;
+            @include transition(all .25s ease-in-out);
+        }
+        @include display(flex);
+        
+    }
+    @media screen and (min-width:$screen-sm){
+        @include justify-content(center);
     }
     ul{
         padding:0;
-        @media screen and (min-width:$screen-pad-landscape){
-            @include display(flex);
-            @include justify-content(center);
-            margin:$vertical-spacing auto;
-        }
+        margin:0;
     }
-    .sticky &{
-        ul{
-            @include justify-content(space-between);
-            @include align-items(center);
+    > ul{
+        text-transform: uppercase;
+        border-top:2px solid white;
+        padding:5rem 0 3rem 0;
+        @media screen and (max-width:$screen-iPhone5){
+            width:100%;
+            text-align:left;
         }
-    }
-}
-li[class*="item"]{
-    list-style: none;
-    &.home a{
-        display:none;
-    }
-    .sticky &.home{
-        a{
-            display:block;
-            @include text-indent(-9999px);
-            background:transparent url('../img/logo-av-small.svg') no-repeat left center ;
-            height: 2em;
-            width: 4em;
-        }
-        &:after{display:none;}
-    }
-    #main-nav > ul & {
-        @include main-menu(400,$brand-primary);
-        &.menu-item-has-children > a:after{
-            @include icon-style ("\f0d7", 0, 1, .5em, 1em);
-            color:$brand-secondary;
-        }
-        @media screen and (max-width:$screen-xs){
-            border-top:1px solid $brand-secondary;
-            padding:1rem 0;
-            a{
-                padding:0 1rem;
-            }
-        }
-        @media screen and (max-width:$screen-pad-landscape - 1){
-            display:block;
-        }
-        @media screen and (min-width:$screen-pad-landscape + 1){
-            position:relative;
-            &:after {
-                content: "/";
-                font-weight:bold;
-                color:$brand-secondary;
-                padding:0 .5em;
-            }
-        }
-    }
-    &:hover{
-        > .sub-menu {
-            opacity:1;
-            top:.75*$vertical-spacing;
+        @media screen and (min-width:$screen-sm){
+            min-width:50vW;  
         }
 
+        /*            */
     }
-    .sub-menu &{
-        @media screen and (min-width:$screen-pad-landscape){
-            display:block;
-        border-bottom:1px solid $brand-secondary;
-        padding:1.5rem 0;
-        line-height:1.2;
-        text-transform:none;
-        white-space:nowrap;
-        &:last-of-type{border:0;}
-        }
-
+    ul, li{
+        list-style:none;
+        color:inherit;
     }
 
-}
-.sub-menu{
-    @media screen and (max-width:$screen-pad-landscape - 1){
-        
-    }
-    @media screen and (min-width:$screen-pad-landscape){
-        background:rgba(0,0,0,.75);
-        @include box-shadow-green;
-        padding:0 2rem;
-        position:absolute;
-        top:2.5*$vertical-spacing;
-        z-index:10;
-        min-width:10vW;
-        opacity:0;
-        @include transition(all 0.2s ease-in-out);
-        a {color:lighten($text-color,90%) !important;}
-        .sub-menu {
-            left:100%;
-        }
-
-    }
 }

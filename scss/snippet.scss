@@ -1,0 +1,90 @@
+#top-nav{
+    position:relative;
+    top:-600px;
+    left:0;
+    right:0;
+    height:0;
+
+
+    @include transition (all, 1s, ease-out);
+    &.sticky{
+        position:fixed;
+        top:0;
+        z-index:999999;
+
+        height:60px;
+        background:transparent url('../img/logo-av-small.svg') no-repeat left center ;
+        @include shadow;
+        @include transition (all, 1s, ease-out);
+    }
+}
+
+li[class*="item"]{
+    list-style: none;
+    header nav > ul & {
+
+        @media screen and (max-width:$screen-xs){
+            border-top:1px solid $brand-secondary;
+            padding:1rem 0;
+            a{
+                padding:0 1rem;
+            }
+        }
+        @media screen and (max-width:$screen-pad-landscape - 1){
+            display:block;
+            > ul > li {
+                text-transform:none;
+                a{padding-left:2rem;}
+                > ul > li > a {padding-left:4rem;font-style:italic;}
+            }
+        }
+        @media screen and (min-width:$screen-pad-landscape + 1){
+            position:relative;
+            &:after {
+                content: "/";
+                font-weight:bold;
+                color:$brand-secondary;
+                padding:0 .5em;
+            }
+        }
+        &:hover{
+            > .sub-menu {
+                opacity:1;
+                top:.75*$vertical-spacing;
+            }
+
+        }
+        .sub-menu &{
+            @media screen and (min-width:$screen-pad-landscape){
+                display:block;
+                border-bottom:1px solid $brand-secondary;
+                padding:1.5rem 0;
+                line-height:1.2;
+                text-transform:none;
+                white-space:nowrap;
+                &:last-of-type{border:0;}
+            }
+
+        }
+    }
+}
+.sub-menu{
+    
+    @media screen and (min-width:$screen-pad-landscape){
+        background:rgba(0,0,0,.75);
+        @include box-shadow-green;
+        padding:0 2rem;
+        position:absolute;
+        top:2.5*$vertical-spacing;
+        z-index:10;
+        min-width:10vW;
+        opacity:0;
+        @include transition(all 0.2s ease-in-out);
+        a {color:lighten($text-color,90%) !important;}
+        .sub-menu {
+            left:100%;
+        }
+
+    }
+}
+

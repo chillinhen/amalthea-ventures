@@ -42,38 +42,36 @@
                     <!-- logo -->
                     <h1 class="logo">
                         <?php if (has_custom_logo()) : ?>
-                        <?php the_custom_logo(); ?>
-                        <span><?php bloginfo('description'); ?></span>
-                        <?php else : ?>
-                        <a href="<?php echo home_url(); ?>">
-                            <?php bloginfo('name'); ?>
+                            <?php the_custom_logo(); ?>
                             <span><?php bloginfo('description'); ?></span>
-                        </a>
-                        <?php endif;?>
-                    </h1>
-                    <label class="navbar-toggle">
-                            <input type="checkbox">
-                            <!-- nav -->
-                            <nav class="nav" role="navigation" id="main-nav">
-                                <?php html5blank_nav(); ?>
-                            </nav>
-                            <!-- /nav -->
-
-                            <span class="button"></span>
-                        </label>
-
-
+                        <?php else : ?>
+                            <a href="<?php echo home_url(); ?>">
+                                <?php bloginfo('name'); ?>
+                                <span><?php bloginfo('description'); ?></span>
+                            </a>
+                        <?php endif; ?>
+                    </h1>  <!-- /logo -->
+                    <div id="top-nav">
+                        <a class="navbar-toggle" title="Menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    </div>
                     
-                    <!-- /logo --> 
+                    <nav class="nav" role="navigation" id="main-nav">
+                        <?php html5blank_nav(); ?>
+                    </nav>
                 </div>
             </header>
-           
+
 
             <!-- header -->
 
 
-            
-             <?php
+
+            <?php
             if (is_singular() && has_post_thumbnail()) :
                 $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-image-cover');
                 $post_image = $thumb['0'];
@@ -81,7 +79,7 @@
 
                 <div class="header-image bg-image" style="background-image: url(<?php echo esc_url($post_image); ?>)"> </div>
 
-            <?php
+                <?php
             else :
 
                 $header_image = get_header_image() ? get_header_image() : get_template_directory_uri() . '/img/header/default-header.jpg';
@@ -89,7 +87,7 @@
 
                 <div class="header-image bg-image" style="background-image: url( <?php echo $header_image ?> );"> </div>
 
-    <?php endif; ?>
+            <?php endif; ?>
 
-<?php endif; ?>
+        <?php endif; ?>
         <!-- /header -->

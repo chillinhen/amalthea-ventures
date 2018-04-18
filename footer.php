@@ -1,6 +1,9 @@
 
 <!-- footer -->
 			<footer class="footer" role="contentinfo">
+                            <nav class="nav" role="navigation" id="off-nav">
+                        <?php html5blank_nav(); ?>
+                    </nav>
                             <?php if(is_page_template('template-maintenance.php')) : ?>    
 				<?php edit_post_link(); ?>
                                 <?php endif;?>
